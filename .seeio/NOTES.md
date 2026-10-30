@@ -4,6 +4,7 @@
 - Couple: Suraj Negi & Deeksha Rao.
 - Wedding date: 24 January 2027. Venue: Ram Manohar Lohia Transit Hostel (owner confirmed; map https://maps.app.goo.gl/ZRaNkEfqFLjoTFFe9).
 - Families: groom's side "The Negi Family"; bride's parents Mr. Vinod Kumar & Mrs. Suman Lata.
+  Owner approved this wording and the photo layout (carousel + story polaroid).
 - Love story text provided by owner (Story section).
 - Schedule:
   - 23 Jan 2027: Engagement 3:00 PM, Evening Tilak 6:00 PM, Sangeet 8:00 PM to 10:00 PM
