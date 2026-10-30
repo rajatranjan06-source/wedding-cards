@@ -1,7 +1,16 @@
 (() => {
-  const WEDDING = new Date('2027-02-14T15:00:00+01:00');
-  const RSVP_EMAIL = 'rsvp@example.com';
+  const WEDDING = new Date('2027-01-24T14:00:00+05:30');
+  const RSVP_EMAIL = 'rajatranjan0627@gmail.com';
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* Music toggle */
+  const musicBtn = document.getElementById('musicBtn');
+  const setMusicUI = on => musicBtn.setAttribute('aria-pressed', String(on));
+  musicBtn.addEventListener('click', () => setMusicUI(WeddingMusic.toggle()));
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden && WeddingMusic.playing) { WeddingMusic.pause(); musicBtn.dataset.resume = '1'; }
+    else if (!document.hidden && musicBtn.dataset.resume) { delete musicBtn.dataset.resume; WeddingMusic.play(); }
+  });
 
   /* Envelope */
   const env = document.getElementById('envelope');
@@ -10,6 +19,8 @@
   env.addEventListener('click', () => {
     if (env.classList.contains('open')) return;
     env.classList.add('open');
+    try { WeddingMusic.play(); setMusicUI(true); } catch (e) {}
+    musicBtn.hidden = false;
     intro.classList.add('gone');
     setTimeout(() => {
       document.body.classList.remove('locked');
@@ -69,7 +80,7 @@
   /* 3D carousel */
   const car = document.getElementById('carousel');
   let idx = 0, auto;
-  const spin = dir => { idx += dir; car.style.transform = `rotateY(${idx * -60}deg)`; };
+  const spin = dir => { idx += dir; car.style.transform = `rotateY(${idx * -90}deg)`; };
   document.getElementById('next').onclick = () => { spin(1); restart(); };
   document.getElementById('prev').onclick = () => { spin(-1); restart(); };
   const restart = () => { clearInterval(auto); if (!reduce) auto = setInterval(() => spin(1), 3500); };
