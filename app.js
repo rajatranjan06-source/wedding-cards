@@ -80,7 +80,7 @@
   /* 3D carousel */
   const car = document.getElementById('carousel');
   let idx = 0, auto;
-  const spin = dir => { idx += dir; car.style.transform = `rotateY(${idx * -90}deg)`; };
+  const spin = dir => { idx += dir; car.style.transform = `rotateY(${idx * -60}deg)`; };
   document.getElementById('next').onclick = () => { spin(1); restart(); };
   document.getElementById('prev').onclick = () => { spin(-1); restart(); };
   const restart = () => { clearInterval(auto); if (!reduce) auto = setInterval(() => spin(1), 3500); };
