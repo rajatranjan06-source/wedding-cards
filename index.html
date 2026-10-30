@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Olivia &amp; James | Wedding Invitation</title>
+<meta name="description" content="You are invited to the wedding of Olivia and James, 14 February 2027. Open the envelope to see the details and RSVP.">
+<meta property="og:title" content="Olivia &amp; James are getting married">
+<meta property="og:description" content="Open your 3D invitation, see the celebration details and RSVP.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=1">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
+</head>
+<body class="locked">
+
+<canvas id="petals" aria-hidden="true"></canvas>
+
+<!-- Intro: 3D envelope -->
+<section id="intro" class="intro">
+  <p class="intro-kicker">A special invitation for you</p>
+  <div class="scene">
+    <button class="envelope" id="envelope" aria-label="Open the invitation">
+      <span class="env-back"></span>
+      <span class="letter">
+        <span class="letter-inner">
+          <span class="script">Olivia &amp; James</span>
+          <span class="small">14 . 02 . 2027</span>
+        </span>
+      </span>
+      <span class="env-front"></span>
+      <span class="env-flap"></span>
+      <span class="seal">O&amp;J</span>
+    </button>
+  </div>
+  <p class="intro-hint">Tap the seal to open</p>
+</section>
+
+<main id="main" aria-hidden="true">
+
+  <!-- Hero with tilting 3D card -->
+  <section class="hero" id="hero">
+    <div class="tilt-wrap">
+      <div class="card3d" id="card3d">
+        <div class="layer frame"></div>
+        <div class="layer l1">
+          <p class="kicker">Together with their families</p>
+        </div>
+        <div class="layer l2">
+          <h1 class="names"><span>Olivia</span><em>&amp;</em><span>James</span></h1>
+        </div>
+        <div class="layer l3">
+          <p class="kicker">request the pleasure of your company</p>
+          <p class="date">Sunday, 14 February 2027</p>
+          <p class="place">Villa Aurelia, Lake Como</p>
+        </div>
+        <div class="layer flowers" aria-hidden="true">
+          <span class="flower f1">❀</span><span class="flower f2">✿</span><span class="flower f3">❀</span><span class="flower f4">✿</span>
+        </div>
+      </div>
+    </div>
+    <a href="#countdown" class="scroll-cue">Scroll <span>⌄</span></a>
+  </section>
+
+  <!-- Countdown -->
+  <section class="section" id="countdown">
+    <h2 class="title reveal">Counting down</h2>
+    <div class="cubes reveal">
+      <div class="cube-box"><div class="cube" data-unit="days"><div class="face front">00</div><div class="face top">00</div></div><span>Days</span></div>
+      <div class="cube-box"><div class="cube" data-unit="hours"><div class="face front">00</div><div class="face top">00</div></div><span>Hours</span></div>
+      <div class="cube-box"><div class="cube" data-unit="minutes"><div class="face front">00</div><div class="face top">00</div></div><span>Minutes</span></div>
+      <div class="cube-box"><div class="cube" data-unit="seconds"><div class="face front">00</div><div class="face top">00</div></div><span>Seconds</span></div>
+    </div>
+  </section>
+
+  <!-- Story -->
+  <section class="section" id="story">
+    <h2 class="title reveal">Our story</h2>
+    <div class="timeline">
+      <article class="moment reveal"><span class="year">2019</span><h3>First hello</h3><p>A rainy afternoon, one shared umbrella and a conversation that never really ended.</p></article>
+      <article class="moment reveal"><span class="year">2022</span><h3>First home</h3><p>Two bookshelves, one very opinionated cat and a lot of Sunday pancakes.</p></article>
+      <article class="moment reveal"><span class="year">2026</span><h3>The question</h3><p>At sunset by the lake, James asked. Olivia said yes before he finished.</p></article>
+    </div>
+  </section>
+
+  <!-- Events: flip cards -->
+  <section class="section" id="events">
+    <h2 class="title reveal">The celebration</h2>
+    <p class="sub reveal">Tap a card to see the details</p>
+    <div class="flips">
+      <button class="flip reveal" aria-label="Ceremony details">
+        <span class="flip-inner">
+          <span class="flip-face flip-front"><span class="icon">💍</span><span class="ftitle">Ceremony</span><span class="ftime">3:00 PM</span></span>
+          <span class="flip-face flip-back"><span class="ftitle">Ceremony</span><span>Garden Terrace, Villa Aurelia</span><span>Please arrive by 2:30 PM</span></span>
+        </span>
+      </button>
+      <button class="flip reveal" aria-label="Cocktail hour details">
+        <span class="flip-inner">
+          <span class="flip-face flip-front"><span class="icon">🥂</span><span class="ftitle">Cocktails</span><span class="ftime">4:30 PM</span></span>
+          <span class="flip-face flip-back"><span class="ftitle">Cocktails</span><span>Lakeside Lawn</span><span>Live strings and canapés</span></span>
+        </span>
+      </button>
+      <button class="flip reveal" aria-label="Dinner and dancing details">
+        <span class="flip-inner">
+          <span class="flip-face flip-front"><span class="icon">💃</span><span class="ftitle">Dinner &amp; Dancing</span><span class="ftime">6:30 PM</span></span>
+          <span class="flip-face flip-back"><span class="ftitle">Dinner &amp; Dancing</span><span>The Grand Hall</span><span>Dress code: black tie optional</span></span>
+        </span>
+      </button>
+    </div>
+  </section>
+
+  <!-- 3D carousel -->
+  <section class="section" id="gallery">
+    <h2 class="title reveal">Moments</h2>
+    <div class="carousel-scene reveal">
+      <div class="carousel" id="carousel">
+        <figure style="--i:0;--c1:#f6d5d1;--c2:#e8a9a3"><span>Paris</span></figure>
+        <figure style="--i:1;--c1:#f3e3c3;--c2:#d9b77a"><span>The beach</span></figure>
+        <figure style="--i:2;--c1:#dfe7d8;--c2:#a7bf98"><span>Our garden</span></figure>
+        <figure style="--i:3;--c1:#e6dbef;--c2:#b9a2cf"><span>Ski trip</span></figure>
+        <figure style="--i:4;--c1:#d7e6ee;--c2:#8fb4c7"><span>The lake</span></figure>
+        <figure style="--i:5;--c1:#f5dccb;--c2:#e0a37c"><span>Proposal</span></figure>
+      </div>
+    </div>
+    <div class="carousel-nav">
+      <button id="prev" aria-label="Previous photo">‹</button>
+      <button id="next" aria-label="Next photo">›</button>
+    </div>
+  </section>
+
+  <!-- Venue -->
+  <section class="section" id="venue">
+    <h2 class="title reveal">Venue</h2>
+    <div class="venue-card reveal">
+      <h3>Villa Aurelia</h3>
+      <p>Via Regina 12, 22012 Cernobbio, Lake Como, Italy</p>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Cernobbio+Lake+Como+Italy" target="_blank" rel="noopener">Open in Maps</a>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="section" id="rsvp">
+    <h2 class="title reveal">Will you join us?</h2>
+    <p class="sub reveal">Kindly reply by 10 January 2027</p>
+    <form class="rsvp reveal" id="rsvpForm">
+      <label>Your name<input name="name" required autocomplete="name"></label>
+      <label>Number of guests
+        <select name="guests"><option>1</option><option>2</option><option>3</option><option>4</option></select>
+      </label>
+      <fieldset class="choice">
+        <label><input type="radio" name="attending" value="Joyfully accepts" checked> Joyfully accept</label>
+        <label><input type="radio" name="attending" value="Regretfully declines"> Regretfully decline</label>
+      </fieldset>
+      <label>A note for the couple<textarea name="note" rows="3"></textarea></label>
+      <button class="btn" type="submit">Send RSVP</button>
+      <p class="rsvp-done" id="rsvpDone" hidden>Thank you! Your email app should open with your reply ready to send.</p>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p class="script">Olivia &amp; James</p>
+    <p>14 February 2027 · Lake Como</p>
+  </footer>
+</main>
+
+<script src="app.js?v=1"></script>
+</body>
+</html>
